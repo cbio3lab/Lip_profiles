@@ -1,4 +1,4 @@
-This code is based on R code but also uses the Jazzy Tool developed by Eike Caldeweyher and Gian Marco Ghiandoni in AstraZeneca (see https://github.com/AstraZeneca/jazzy for details)
+This code is based on our R code but also uses the Jazzy Tool developed by Eike Caldeweyher and Gian Marco Ghiandoni in AstraZeneca (see https://github.com/AstraZeneca/jazzy for details)
 
 This first version only works for monobasic or monoacid compounds. 
 
