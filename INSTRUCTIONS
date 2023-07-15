@@ -1,0 +1,40 @@
+This code is based on R code but also uses the Jazzy Tool developed by Eike Caldeweyher and Gian Marco Ghiandoni in AstraZeneca (see https://github.com/AstraZeneca/jazzy for details)
+
+This first version only works for monobasic or monoacid compounds. 
+
+1. Once Jazzy is installed on your computers, calculate Jazzy descriptors using the script 'jazzy_descriptors_v3.sh'
+
+bash jazzy_descriptors_v3.sh "desired name" "yourcompouds.csv"
+
+The csv called "yourcompouds.csv" in the first column must have the id (name or id of your molecules) and in the second column the smiles of your compounds
+
+1. In the R environment, download our dataset 'logD_final.xlsx'
+
+2.  Set the location where the database was downloaded as a working directory 
+
+3. If your terminal does not have the required packages, install:
+install.packages('rJava')
+install.packages('rcdk')
+install.packages('readxl')
+install.packages('caret')
+install.packages('dplyr')
+install.packages('ggplot2')
+install.packages('Metrics')
+install.packages('bestglm')
+install.packages('pROC')
+install.packages('glmnet')
+install.packages('randomForest')
+install.packages('e1071')
+
+4. Run the script, thus the training and test set for all ML algorithms are ready.
+
+5. Create a .xlsx file called "test.xlsx" that has the following columns:
+
+Column 1 = SMILES: Use the canonical SMILES Code for each molecule 
+Column 2 =  type (acid or base) #here you must separate acids from bases
+Column 3 = pKa #it can be calculated with ChemAxon in case experimental values are not available) 
+Column 4 =  pH # The desired pH at which you want to classificate your molecule
+
+6. Predictions from all models will be communicated and stored in the file "results_ML.xlsx"
+
+Questions or comments are always welcome: cbio3group@gmail.com
